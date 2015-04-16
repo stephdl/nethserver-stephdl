@@ -1,0 +1,6 @@
+[stephdl]
+name=Stephdl (Stephane de Labrusse) repository for nethserver $releasever - $basearch
+baseurl=http://mirror.de-labrusse.fr/NethServer/$releasever
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-stephdl

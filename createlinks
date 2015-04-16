@@ -1,0 +1,4 @@
+#!/usr/bin/perl
+
+use strict;
+use esmith::Build::CreateLinks qw(:all);
