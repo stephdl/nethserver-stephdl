@@ -1,0 +1,4 @@
+/etc/yum.repos.d/stephdl.repo
+/etc/pki/rpm-gpg/RPM-GPG-KEY-stephdl
+/etc/cron.daily/check4StephdlUpdates
+/sbin/e-smith/check4StephdlUpdates
