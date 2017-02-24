@@ -3,8 +3,9 @@
 mkdir -p /tmp/check4StephdlUpdates.$$
 TMPFILE=`mktemp /tmp/check4StephdlUpdates.$$/XXXXXXXXXX` || exit 1
 TMP1=`mktemp /tmp/check4StephdlUpdates.$$/XXXXXXXXXX` || exit 1
+DOMAIN=$(/sbin/e-smith/db configuration get DomainName)|| exit 1
 
-MAILADDR=root@localhost
+MAILADDR=admin@$DOMAIN
 
 yum -e 0 -d 0 check-update --disablerepo=* --enablerepo=stephdl > $TMP1
 if [ $? = 100 ]; then
