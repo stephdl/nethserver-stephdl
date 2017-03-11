@@ -6,3 +6,4 @@ $L['Explanations_label'] = 'This repository needs a paid subscription, please se
 $L['login_label'] = 'login';
 $L['password_label'] = 'password';
 $L['uuid_label'] = 'Nethserver ID';
+$L['Stephdl_Description'] = 'Configure the Stephdl Repository';
