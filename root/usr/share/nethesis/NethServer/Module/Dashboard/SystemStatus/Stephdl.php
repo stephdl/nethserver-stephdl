@@ -25,27 +25,27 @@ class Stephdl extends \Nethgui\Controller\AbstractController
 
     public $sortId = 60;
  
-    private $phonehome = "";
+    private $uuid = "";
 
 
-    private function readPhoneHome()
+    private function readuuid()
     {
-        $phonehome = $this->getPlatform()->getDatabase('configuration')->getProp('phone-home', 'uuid');
-        return $phonehome;
+        $uuid = $this->getPlatform()->exec('sudo dmidecode -s system-uuid')->getOutput();
+        return $uuid;
     }
 
     public function process()
     {
-        $this->phonehome = $this->readPhoneHome();
+        $this->uuid = $this->readuuid();
     }
  
     public function prepareView(\Nethgui\View\ViewInterface $view)
     {
 
-        if (!$this->phonehome) {
-            $this->phonehome = $this->readPhoneHome();
+        if (!$this->uuid) {
+            $this->uuid = $this->readuuid();
         }
-        $view['PhoneHome'] = $this->phonehome;
+        $view['uuid'] = $this->uuid;
 
     }
 }
