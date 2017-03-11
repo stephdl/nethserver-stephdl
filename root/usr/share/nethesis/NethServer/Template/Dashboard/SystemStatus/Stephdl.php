@@ -3,8 +3,8 @@
 echo "<div class='dashboard-item'>";
 echo "<dl>";
 echo $view->header()->setAttribute('template',$T('Stephdl_Title'));
-echo "<dt>".$T('NethserverID_label')."</dt><dd>"; echo $view->textLabel('PhoneHome'); echo "</dd>";
-echo "<dt>".$T('StephdlOnline_label')."</dt><dd>"; //echo $view->textLabel('kernel'); echo "</dd>";
+echo "<dt>".$T('NethserverID_label')."</dt><dd>"; echo $view->textLabel('uuid'); echo "</dd>";
+echo "<dt>".$T('StephdlOnline_label')."</dt><dd>";
 $online = $T('Online_label');
 $offline = $T('Offline_label');
 

@@ -2,3 +2,6 @@
 
 use strict;
 use esmith::Build::CreateLinks qw(:all);
+
+my $event = "nethserver-stephdl";
+templates2events("/etc/sudoers", $event);
