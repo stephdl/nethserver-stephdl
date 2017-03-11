@@ -1,8 +1,8 @@
 {
 my $login    = ${stephdl}{'login'}    || 'fixLogin';
 my $password = ${stephdl}{'password'} || 'fixPassword';
-my $uuid     = system('/usr/sbin/dmidecode -s system-uuid') || 'fixUuid';
-
+my $uuid     = `/usr/sbin/dmidecode -s system-uuid` || 'fixUuid';
+chomp $uuid;
 $OUT .= << "EOF";
 [stephdl]
 name=Stephdl (Stephane de Labrusse) repository for nethserver \$releasever - \$basearch
