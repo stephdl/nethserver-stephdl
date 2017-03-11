@@ -5,3 +5,4 @@ use esmith::Build::CreateLinks qw(:all);
 
 my $event = "nethserver-stephdl-update";
 templates2events("/etc/sudoers", $event);
+templates2events("/etc/yum.repos.d/stephdl.repo", $event);
