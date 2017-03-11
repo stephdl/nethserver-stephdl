@@ -5,8 +5,8 @@ my $uuid     = system('/usr/sbin/dmidecode -s system-uuid') || 'fixUuid';
 
 $OUT .= << "EOF";
 [stephdl]
-name=Stephdl (Stephane de Labrusse) repository for nethserver $releasever - $basearch
-baseurl=http://$login-$uuid:$password\@mirror.de-labrusse.fr/NethServer/$releasever
+name=Stephdl (Stephane de Labrusse) repository for nethserver \$releasever - \$basearch
+baseurl=http://$login-$uuid:$password\@mirror.de-labrusse.fr/NethServer/\$releasever
 enabled=1
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-stephdl
