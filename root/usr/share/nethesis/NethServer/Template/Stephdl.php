@@ -7,6 +7,6 @@ echo $view->panel()
     ->insert( $view->panel()->insert($view->literal("<a href='https://mirror.de-labrusse.fr' target='_blank'>https://mirror.de-labrusse.fr</a>")->setAttribute('hsc', FALSE)))
     ->insert($view->textInput('login',$view::LABEL_LEFT))
     ->insert($view->textInput('password', $view::TEXTINPUT_PASSWORD|$view::LABEL_LEFT))
-    ->insert($view->textarea('uuid',$view::STATE_DISABLED|$view::LABEL_LEFT)->setAttribute('dimensions', '1x40'));
+    ->insert($view->textarea('uuid',$view::STATE_READONLY|$view::LABEL_LEFT)->setAttribute('dimensions', '1x40'));
 
 echo $view->buttonList($view::BUTTON_SUBMIT);
