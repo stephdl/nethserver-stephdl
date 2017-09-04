@@ -9,10 +9,13 @@ MAILADDR=admin@$DOMAIN
 
 yum -e 0 -d 0 check-update --disablerepo=* --enablerepo=stephdl > $TMP1
 if [ $? = 100 ]; then
-  echo -e "===\n=== yum reports available updates for Stephdl repository :\n===" >> $TMPFILE
+  echo -e "===\n=== Yum reports available updates for Stephdl repository :\n===" >> $TMPFILE
   cat $TMP1 >> $TMPFILE
  echo -e "\n    To apply all these updates, you can log on your server and run the following command :\n
-    yum update --enablerepo=stephdl\n" >> $TMPFILE
+    yum update --enablerepo=stephdl\n\n
+===\n=== Donation : \n===\n
+    All my development work is done in my free time and from my own expenses.\n    If you consider my modules as something helpful, thank you to kindly make a donation\n
+    https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZPK8FKHVT4TY8" >> $TMPFILE
 fi
 
 if [ -s $TMPFILE ]; then
