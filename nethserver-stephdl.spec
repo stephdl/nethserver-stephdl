@@ -1,6 +1,6 @@
 Summary: NethServer configuration for stephdl repository
 Name: nethserver-stephdl
-Version: 1.0.6
+Version: 1.0.7
 Release: 1%{?dist}
 License: GPL
 Source: %{name}-%{version}.tar.gz
@@ -39,8 +39,12 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %dir %{_nseventsdir}/%{name}-update
 %doc COPYING
+%attr(0755,root,root) %{_sysconfdir}/cron.daily/check4StephdlUpdates
 
 %changelog
+* Tue Aug 21 2018 Stephane de Labrusse <stephdl@de-labrusse.fr> - 1.0.7-1
+- give permisions execution to check4StephdlUpdates
+
 * Sat Sep 09 2017 Stephane de LAbrusse <stephdl@de-labrusse.fr> - 1.0.6-1
 - don't forget to email root on update
 
