@@ -1,6 +1,6 @@
 Summary: NethServer configuration for stephdl repository
 Name: nethserver-stephdl
-Version: 1.0.11
+Version: 1.0.12
 Release: 1%{?dist}
 License: GPL
 Source: %{name}-%{version}.tar.gz
@@ -45,6 +45,9 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) /etc/yum.repos.d/stephdl.repo
 
 %changelog
+* Wed Apr 29 2020 stephane de labrusse <stephdl@de-labrusse.fr> - 1.0.12-1
+- Warns about updates for dolibarr and roundcubemail
+ 
 * Fri Apr 17 2020 stephane de Labrusse <stephdl@de-labrusse.fr> - 1.0.11-1
 - Yum repository conf are no replace
 
