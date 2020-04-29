@@ -7,7 +7,7 @@ DOMAIN=$(/sbin/e-smith/db configuration get DomainName)|| exit 1
 
 MAILADDR="root admin@$DOMAIN"
 
-yum -e 0 -d 0 check-update --disablerepo=* --enablerepo=stephdl > $TMP1
+yum -e 0 -d 0 check-update --disablerepo=* --enablerepo=stephdl,stephdl-dolibarr,stephdl-roundcubemail > $TMP1
 if [ $? = 100 ]; then
   echo -e "===\n=== Yum reports available updates for Stephdl repository :\n===" >> $TMPFILE
   cat $TMP1 >> $TMPFILE
