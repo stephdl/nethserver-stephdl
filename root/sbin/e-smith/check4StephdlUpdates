@@ -11,11 +11,18 @@ yum -e 0 -d 0 check-update --disablerepo=* --enablerepo=stephdl,stephdl-dolibarr
 if [ $? = 100 ]; then
   echo -e "===\n=== Yum reports available updates for Stephdl repository :\n===" >> $TMPFILE
   cat $TMP1 >> $TMPFILE
- echo -e "\n    To apply all these updates, you can log on your server and run the following command :\n
+ echo -e "\n    To apply all the updates of stephdl repository, you can log on your server and run the following command :\n
     yum update --enablerepo=stephdl\n\n
+    To apply all the updates of roundcubemail repository, you can log on your server and run the following command :\n
+    yum update --enablerepo=stephdl-roundcubemail\n\n
+    To apply all the updates of dolibarr repository, you can log on your server and run the following command :\n
+    yum update --enablerepo=stephdl-dolibarr\n\n
 ===\n=== Donation : \n===\n
-    All my development work is done in my free time and from my own expenses.\n    If you consider my modules as something helpful, thank you to kindly make a donation\n
-    https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZPK8FKHVT4TY8" >> $TMPFILE
+    All my development work is done in my free time and from my own expenses. The softwares are free for you, but not the hardware to develop them.
+    If you consider my work as something helpful, thank you to kindly make a donation and allow me to continue paying my server and all associated costs.
+    Every euros make the difference, please consider the recurring donation if you earn your living with my softwares.
+
+    https://mirror.de-labrusse.fr/doku.php#donation" >> $TMPFILE
 fi
 
 if [ -s $TMPFILE ]; then
