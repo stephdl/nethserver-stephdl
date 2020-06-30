@@ -1,7 +1,7 @@
 Summary: NethServer configuration for stephdl repository
 Name: nethserver-stephdl
-Version: 1.1.0
-Release: 2%{?dist}
+Version: 1.1.1
+Release: 1%{?dist}
 License: GPL
 Source: %{name}-%{version}.tar.gz
 BuildArch: noarch
@@ -45,6 +45,9 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) /etc/yum.repos.d/stephdl.repo
 
 %changelog
+* Tue Jun 20 2020 stephane de labrusse <stephdl@de-labrusse.fr> - 1.1.1-1
+- Enable this repository for subscription
+
 * Sun May 03 2020 stephane de labrusse <stephdl@de-labrusse.fr> - 1.1.0-1
 - Emphasys Donation
 - Add explanations how to update dolibarr and roundcubemail
