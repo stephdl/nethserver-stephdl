@@ -1,5 +1,5 @@
 /etc/yum.repos.d/stephdl.repo
 /etc/yum.repos.d/stephdl-roundcubemail.repo
+/etc/yum.repos.d/stephdl-dolibarr.repo
 /etc/pki/rpm-gpg/RPM-GPG-KEY-stephdl
-/etc/cron.daily/check4StephdlUpdates
-/sbin/e-smith/check4StephdlUpdates
+/etc/e-smith/templates/etc/nethserver/eorepo.conf/45stephdl
