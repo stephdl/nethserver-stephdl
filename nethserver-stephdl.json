@@ -5,9 +5,9 @@
    "description": "Provide the repository of stephane de Labrusse",
    "url": "",
    "provides": ["nethserver-stephdl"],
-   "release": {
-   "version": "1.0"
-   },
+  "release": {
+    "version": "_RELEASE_"
+  },
   "author": {
         "name": "Stephane de Labrusse",
         "url": "https://github.com/stephdl/nethserver-stephdl",
