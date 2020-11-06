@@ -1,0 +1,7 @@
+ #
+ # nsapi_nethserver_stephdl
+ #
+ Cmnd_Alias NSAPI_NETHSERVER_STEPHDL = \
+      /usr/libexec/nethserver/api/nethserver-stephdl/read
+
+ Defaults!NSAPI_NETHSERVER_STEPHDL !requiretty

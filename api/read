@@ -1,0 +1,35 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+use JSON;
+use NethServer::ApiTools;
+use LWP::Simple qw (head);
+
+my $input = NethServer::ApiTools::readInput();
+my $cmd = $input->{'action'};
+my $ret = {};
+my $url = 'http://mirror.de-labrusse.fr';
+
+
+if ( $cmd eq "app-info") {
+    if (head($url)) {
+            $ret = {
+                'name' => "Stephdl online",
+                'url' => "https://mirror.de-labrusse.fr",
+                'description' => "Provide the stephane de Labrusse (stephdl) repository",
+                'summary' => "Provide the stephane de Labrusse (stephdl) repository"
+            };
+        }
+        else {
+            $ret = {
+                'name' => "Stephdl offline",
+                'url' => "https://mirror.de-labrusse.fr",
+                'description' => "The stephane de Labrusse (stephdl) repository seems to be offline",
+                'summary' => "The stephane de Labrusse (stephdl) repository seems to be offline"
+            };
+        }
+} else {
+    NethServer::ApiTools::error();
+}
+
+print encode_json($ret);
