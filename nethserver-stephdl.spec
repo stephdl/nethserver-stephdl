@@ -1,6 +1,6 @@
 Summary: NethServer configuration for stephdl repository
 Name: nethserver-stephdl
-Version: 1.1.2
+Version: 1.1.3
 Release: 1%{?dist}
 License: GPL
 Source: %{name}-%{version}.tar.gz
@@ -54,6 +54,9 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) /etc/yum.repos.d/stephdl.repo
 
 %changelog
+* Fri Nov 06 2020 stephane de labrusse <stephdl@de-labrusse.fr> - 1.1.3-1
+- Display stephdl repo inside the the cockpit application list
+
 * Mon Sep 28 2020 stephane de labrusse <stephdl@de-labrusse.fr> - 1.1.2-1
 - Include eorepo inside configuration backup
 
