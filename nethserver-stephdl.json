@@ -1,0 +1,21 @@
+ {
+   "id": "nethserver-stephdl",
+   "name": "stephdl",
+   "summary": "Provide the repository of stephane de Labrusse",
+   "description": "Provide the repository of stephane de Labrusse",
+   "url": "",
+   "provides": ["nethserver-stephdl"],
+  "release": {
+    "version": "_RELEASE_"
+  },
+  "author": {
+        "name": "Stephane de Labrusse",
+        "url": "https://github.com/stephdl/nethserver-stephdl",
+        "email": "stephdl@de-labrusse.fr"
+  },
+   "infoapi": {
+     "path": "nethserver-stephdl/read"
+   },
+   "icon": "logo.png",
+   "external": true
+ }
