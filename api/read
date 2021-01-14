@@ -16,8 +16,8 @@ if ( $cmd eq "app-info") {
             $ret = {
                 'name' => "Stephdl is online",
                 'url' => "https://mirror.de-labrusse.fr",
-                'description' => "You can support the stephane de Labrusse (stephdl) software repository by clicking on the link",
-                'summary' => "You can support the stephane de Labrusse (stephdl) software repository by clicking on the link"
+                'description' => "You can support the stephane de Labrusse (stephdl) software repository by clicking on the button",
+                'summary' => "You can support the stephane de Labrusse (stephdl) software repository by clicking on the button"
             };
         }
         else {
