@@ -1,6 +1,6 @@
 Summary: NethServer configuration for stephdl repository
 Name: nethserver-stephdl
-Version: 1.1.4
+Version: 1.1.5
 Release: 1%{?dist}
 License: GPL
 Source: %{name}-%{version}.tar.gz
@@ -55,6 +55,9 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) /etc/yum.repos.d/stephdl.repo
 
 %changelog
+* Sun Feb 14 2021 stephane de labrusse <stephdl@de-labrusse.fr> - 1.1.5-1
+- Timeout to check if stephdl is online
+
 * Thu Jan 14 2021 stephane de labrusse <stephdl@de-labrusse.fr> - 1.1.4-1
 - Enhance donation in cockpit application
 - Email to administrator
