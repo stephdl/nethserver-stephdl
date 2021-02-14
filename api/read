@@ -9,10 +9,10 @@ my $input = NethServer::ApiTools::readInput();
 my $cmd = $input->{'action'};
 my $ret = {};
 my $url = 'http://mirror.de-labrusse.fr';
-
+my $head = `/usr/bin/curl -I $url --connect-timeout 2 --max-time 5`;
 
 if ( $cmd eq "app-info") {
-    if (head($url)) {
+    if ($head =~ 'Location: http://mirror.de-labrusse.fr/doku.php') {
             $ret = {
                 'name' => "Stephdl is online",
                 'url' => "https://mirror.de-labrusse.fr",
