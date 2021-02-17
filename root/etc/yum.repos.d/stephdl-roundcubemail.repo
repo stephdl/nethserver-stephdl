@@ -1,6 +1,7 @@
 [stephdl-roundcubemail]
 name=Stephdl (Stephane de Labrusse) repository for roundcubemail $releasever - $basearch
-baseurl=http://mirror.de-labrusse.fr/NethServer/roundcubemail/$releasever
+#baseurl=http://mirror.de-labrusse.fr/NethServer/roundcubemail/$releasever
+mirrorlist=http://mirrorlist.de-labrusse.fr/mirror-roundcubemail
 enabled=0
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-stephdl

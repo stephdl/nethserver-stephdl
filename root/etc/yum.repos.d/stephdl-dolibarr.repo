@@ -1,6 +1,7 @@
 [stephdl-dolibarr]
 name=Stephdl (Stephane de Labrusse) repository for dolibarr $releasever - $basearch
-baseurl=http://mirror.de-labrusse.fr/NethServer/dolibarr/$releasever
+#baseurl=http://mirror.de-labrusse.fr/NethServer/dolibarr/$releasever
+mirrorlist=http://mirrorlist.de-labrusse.fr/mirror-dolibarr
 enabled=0
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-stephdl
