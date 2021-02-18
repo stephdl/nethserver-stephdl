@@ -12,7 +12,8 @@ my $url = 'http://mirror.de-labrusse.fr';
 my $head = `/usr/bin/curl -I $url --connect-timeout 2 --max-time 5`;
 
 if ( $cmd eq "app-info") {
-    if ($head =~ 'Location: http://mirror.de-labrusse.fr/doku.php') {
+    if (($head =~ 'Location: http://mirror.de-labrusse.fr') ||
+        ($head =~ 'Location: https://mirror.de-labrusse.fr')) {
             $ret = {
                 'name' => "Stephdl is online",
                 'url' => "https://mirror.de-labrusse.fr",
