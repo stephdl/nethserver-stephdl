@@ -1,6 +1,6 @@
 Summary: NethServer configuration for stephdl repository
 Name: nethserver-stephdl
-Version: 1.1.6
+Version: 1.1.7
 Release: 1%{?dist}
 License: GPL
 Source: %{name}-%{version}.tar.gz
@@ -55,6 +55,9 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) /etc/yum.repos.d/stephdl.repo
 
 %changelog
+* Thu Feb 18 2021 stephane de Labrusse <stephdl@de-labrusse.fr> - 1.1.7-1
+- Find if my head use https to find if stephdl is online
+
 * Wed Feb 17 2021 stephane de Labrusse <stephdl@de-labrusse.fr> - 1.1.6-1
 - We use a mirror list now, I hope to get some mirror friends
 
