@@ -5,7 +5,4 @@ use esmith::Build::CreateLinks qw(:all);
 
 my $event = "nethserver-stephdl-update";
 templates2events("/etc/sudoers", $event);
-
-event_actions($event,
-             'stephdl_enablerepo' => '10',
-);
+templates2events("/etc/nethserver/eorepo.conf", $event);
